@@ -1,0 +1,41 @@
+.form-input input{
+    // width: 350px;
+    border-radius: 0 !important;
+}
+
+.form-label {
+    margin-bottom: 0 !important;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.login-form {
+    border-right: dotted;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: end;
+}
+
+.linkeIn-btn,
+.google-btn {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+
+    .btn {
+        padding: 10px;
+        width: 200px;
+        border-radius: 0 !important;
+    }
+}
+
+// .container {
+//     display: grid;
+//     justify-content: center;
+//     align-items: center;
+//     max-width: 100% !important;
+// }

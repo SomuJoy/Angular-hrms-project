@@ -1,0 +1,66 @@
+<main>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <!-- First Column -->
+                    <div class="col-md-6 login-form">
+                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <div class="mb-3 form-input">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                formControlName="username">
+                                <p *ngIf="isValidInput('username')" class="formInputError">
+                                    <small *ngIf="loginForm.controls['username'].errors?.['required']" class="text-danger">
+                                        Please enter a Username
+                                    </small>
+                                </p>
+                                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                            </div>
+                            
+                            <div class="mb-3 form-input">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+                                <p *ngIf="isValidInput('password')" class="formInputError">
+                                    <small *ngIf="loginForm.controls['password'].errors?.['required']" class="text-danger">
+                                        Please enter a password
+                                    </small>
+                                </p>
+                            </div>
+                   
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Show password</label>
+                            </div>
+                            <div class="submit-btn">
+                                <button type="submit" class="btn btn-primary" style="border-radius: 0;" 
+                                [disabled]="!loginForm.valid">Submit</button>
+                            </div>
+                        </form>
+                        <!-- <div class="p-remember forgot col-md-12 col-lg-6 col-12 text-right pr-0">
+                            <a href="/forgot-password" class="login-forgot">Forgot password?</a>
+                        </div> -->
+                    </div>
+                    <!-- Second Column -->
+                    <div class="col-md-6">
+                        <div class="social-media-buttons">
+                            <div class="linkeIn-btn">
+                                <button type="button" class="btn btn-primary btn-block">
+                                    <i class="fab fa-facebook-f"></i> Login with Facebook
+                                </button>
+                            </div>
+                            <div class="google-btn">
+                                <button type="button" class="btn btn-info btn-block">
+                                    <i class="fab fa-linkedin-in"></i> Login with LinkedIn
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
